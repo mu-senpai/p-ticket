@@ -1,23 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            },
+            fontFamily: {
+                raleway: ['Raleway'],
+            },
+            backgroundImage: {
+                banner: "url('assets/banner.png')"
+            },
+          }
+        }
+      </script>
+
     <title>P-Ticket</title>
 </head>
-<body>
-    <header>
 
+<body class="font-raleway">
+
+    <header class="sm:max-w-[81.32%] max-w-[95%] mx-auto mb-16 md:mb-24 lg:mb-40">
+        <!-- Navbar starts -->
+        <div class="navbar bg-base-100 w-full mt-3 md:mt-7 mb-3 sm:mb-6">
+            <!-- Navbar logo -->
+            <div class="navbar-start">
+              <a href="#" class="text-2xl sm:text-3xl font-extrabold">P-Ticket</a>
+            </div>
+
+            <!-- Navbar menu desktop view -->
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-sm">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+
+            <div class="navbar-end">
+              <!-- Navbar button   -->
+              <a class="btn w-20 sm:w-24 text-xs md:text-sm border border-[#1DD100]/[0.4] bg-[#1DD100]/[0.1] text-[#1DD100] flex justify-center items-center">Bus
+                <img src="assets/bus-icon.png" class="w-4 sm:w-5 h-3 sm:h-4" alt="">
+              </a>
+              <!-- Navbar menu mobile and tablet view -->
+              <div class="dropdown dropdown-left dropdown-bottom">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>                      
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Navbar ends -->
+
+            <!-- Banner section starts -->
+            <!-- Hero section starts here -->
+            <div
+              class="hero lg:items-start h-[34.375rem] rounded-[2rem] lg:relative bg-banner bg-cover mb-6"
+            >
+                <div class="hero-overlay bg-opacity-10 rounded-[2rem]"></div>
+                <div class="hero-content lg:mt-[4.375rem] text-center">
+                  <div class="max-w-[91%] sm:max-w-[81%] lg:max-w-[66%]">
+                    <h1 class="mb-5 text-white text-3xl/[2.5rem] sm:text-4xl/[3.5rem] lg:text-5xl/[4.5rem] font-bold">End-to-End Travel with<br><span class="text-[#1DD100]">Greenline Paribahan</span></h1>
+                    <p class="mb-8 text-xs/6 sm:text-sm/7 text-white">
+                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                      quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn bg-[#1DD100] text-black border-none">Get Started</button>
+                  </div>
+                </div>
+                <!-- Cards for desktop banner start here -->
+                <div class="w-[82.92%] lg:flex lg:justify-between lg:items-center lg:absolute lg:-bottom-14 hidden">
+                    <!-- Card-1 -->
+                    <div class="card w-[31%] h-28 bg-base-100 border-b-[3px] border-[#1DD100]">
+                        <div class="card-body flex-row gap-4 items-center justify-center p-3">
+                            <div class="w-12 h-12">
+                                <img class="w-full h-full object-contain" src="assets/people.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="text-3xl font-bold mb-1">500K+</h1>
+                                <p class="text-sm text-[#030712]/[0.6]">Registered users</p>
+                            </div>
+                        </div>
+                      </div>
+                    <!-- Card-2 -->
+                    <div class="card w-[31%] h-28 bg-base-100 border-b-[3px] border-[#1DD100]">
+                        <div class="card-body flex-row gap-4 items-center justify-center p-3">
+                            <div class="w-12 h-12">
+                                <img class="w-full h-full object-contain" src="assets/ticket-cupon.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="text-3xl font-bold mb-1">1.7 lacks</h1>
+                                <p class="text-sm text-[#030712]/[0.6]">Tickets sold</p>
+                            </div>
+                        </div>
+                      </div>
+                    <!-- Card-3   -->
+                    <div class="card w-[31%] h-28 bg-base-100 border-b-[3px] border-[#1DD100]">
+                        <div class="card-body flex-row gap-4 items-center justify-center p-3">
+                            <div class="w-12 h-12">
+                                <img class="w-full h-full object-contain" src="assets/stoppage.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="text-3xl font-bold mb-1">80K+</h1>
+                                <p class="text-sm text-[#030712]/[0.6]">Rental partners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards for desktop banner end here -->
+            </div>
+            <!-- Hero section ends here -->
+
+            <!-- Cards for mobile and tablet devices start here -->
+            <!-- Card-1 -->
+            <div class="card lg:hidden w-full mb-6 h-28 bg-base-100 border-b-[3px] border-[#1DD100]">
+                <div class="card-body flex-row gap-4 items-center justify-center p-3">
+                    <div class="w-12 h-12">
+                        <img class="w-full h-full object-contain" src="assets/people.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold mb-1">500K+</h1>
+                        <p class="text-sm text-[#030712]/[0.6]">Registered users</p>
+                    </div>
+                </div>
+              </div>
+            <!-- Card-2 -->
+            <div class="card lg:hidden w-full mb-6 h-28 bg-base-100 border-b-[3px] border-[#1DD100]">
+                <div class="card-body flex-row gap-4 items-center justify-center p-3">
+                    <div class="w-12 h-12">
+                        <img class="w-full h-full object-contain" src="assets/ticket-cupon.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold mb-1">1.7 lacks</h1>
+                        <p class="text-sm text-[#030712]/[0.6]">Tickets sold</p>
+                    </div>
+                </div>
+              </div>
+            <!-- Card-3   -->
+            <div class="card lg:hidden w-full h-28 bg-base-100 border-b-[3px] border-[#1DD100]">
+                <div class="card-body flex-row gap-4 items-center justify-center p-3">
+                    <div class="w-12 h-12">
+                        <img class="w-full h-full object-contain" src="assets/stoppage.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold mb-1">80K+</h1>
+                        <p class="text-sm text-[#030712]/[0.6]">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cards for mobile and tablet devices end here -->
+            <!-- Banner section ends -->
     </header>
 
-    <main>
-
+    <main class="md:max-w-[81.32%] max-w-[95%] mx-auto mb-16 md:mb-24">
+        <!-- Best offer section starts -->
+        <div class="w-full flex flex-col items-center justify-center">
+            <h1 class="text-3xl sm:text-5xl font-bold mb-8 sm:mb-12">Best offers for you</h1>
+            <!-- Coupon cards -->
+            <div class="w-full flex flex-col lg:flex-row lg:justify-between items-center space-y-6 lg:space-y-0 mb-10 sm:mb-16">
+                <!-- Card-1 -->
+                <div class="card bg-[#FFBF0F] w-full lg:w-[48.5%]">
+                    <div class="w-full card-body flex-row justify-between items-center p-0">
+                        <div class="w-[55%] flex flex-col justify-center items-center text-center sm:text-right sm:items-start space-y-1 sm:space-y-2 p-3 sm:pl-8">
+                            <h1 class="text-2xl sm:text-4xl lg:text-3xl font-extrabold">15% OFF</h1>
+                            <p class="text-sm sm:text-lg lg:text-base font-bold">on your next purchase</p>
+                            <p class="text-sm sm:text-lg lg:text-base font-medium text-[#030712]/[0.5]">use by January 2024</p>
+                        </div>
+                        <div class="w-[10%] h-full">
+                            <img class="w-full h-full object-contain" src="assets/cupon-devider.png" alt="">
+                        </div>
+                        <div class="w-[35%] text-center space-y-1 sm:space-y-2 pr-3 sm:pr-6">
+                            <h1 class="text-xl sm:text-3xl lg:text-2xl font-extrabold">NEW15</h1>
+                            <p class="text-sm sm:text-xl lg:text-lg font-medium text-[#030712]/[0.5]">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card-2 -->
+                <div class="card bg-[#F78C9C] w-full lg:w-[48.5%]">
+                    <div class="w-full card-body flex-row justify-between items-center p-0">
+                        <div class="w-[55%] flex flex-col justify-center items-center text-center sm:text-right sm:items-start space-y-1 sm:space-y-2 p-3 sm:pl-8">
+                            <h1 class="text-2xl sm:text-4xl lg:text-3xl font-extrabold">20% OFF</h1>
+                            <p class="text-sm sm:text-lg lg:text-base font-bold">on your next purchase</p>
+                            <p class="text-sm sm:text-lg lg:text-base font-medium text-[#030712]/[0.5]">use by January 2024</p>
+                        </div>
+                        <div class="w-[10%] h-full">
+                            <img class="w-full h-full object-contain" src="assets/cupon-devider.png" alt="">
+                        </div>
+                        <div class="w-[35%] text-center space-y-1 sm:space-y-2 pr-3 sm:pr-6">
+                            <h1 class="text-xl sm:text-3xl lg:text-2xl font-extrabold">COUP20</h1>
+                            <p class="text-sm sm:text-xl lg:text-lg font-medium text-[#030712]/[0.5]">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn border border-[#1DD100] text-[#1DD100] bg-transparent">See All Offers</button>
+        </div>
+        <!-- Best offer section ends -->
     </main>
 
     <footer>
