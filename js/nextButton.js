@@ -22,8 +22,10 @@ document.getElementById('book-next-btn').addEventListener('click', function(even
     event.preventDefault();
 
     document.getElementById('my_modal_1').showModal();
-    
+
     document.getElementById('passenger-name').value = "";
     document.getElementById('phone-no').value = "";
     document.getElementById('email-add').value = "";
+
+    document.getElementById('book-next-btn').setAttribute('disabled', true);
 })

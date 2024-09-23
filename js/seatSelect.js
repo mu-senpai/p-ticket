@@ -43,9 +43,6 @@ function clickSeat(event) {
                 if (count > 0) {
                     validateInfo();
                 }
-                else {
-                    document.getElementById('book-next-btn').setAttribute('disabled', true);
-                }
     
                 return;
             }
