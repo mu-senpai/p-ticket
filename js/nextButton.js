@@ -9,12 +9,25 @@ document.getElementById('book-next-btn').addEventListener('click', function(even
     let phoneValidate = false;
     
     if (passengerName !== "") {
-        const passengerNameCh = passengerName.split('');
-        for (const element of passengerNameCh) {
-            if (isNaN(element)) {
-                nameValidate = true;
-            } else {
-                nameValidate = false;
+        nameValidate = true;
+        
+        if (passengerName.includes(' ')) {
+            const passengerNameWords = passengerName.split(' ');
+            let chCheck;
+            for (let i = 0; i < passengerNameWords.length; i++) {
+                chCheck = passengerNameWords[i].split('');
+                for (const element of chCheck) {
+                    if (!isNaN(element)) {
+                        nameValidate = false;
+                    }
+                }
+            }
+        } else {
+            const passengerNameCh = passengerName.split('');
+            for (const element of passengerNameCh) {
+                if (!isNaN(element)) {
+                    nameValidate = false;
+                }
             }
         }
     } else{
