@@ -27,6 +27,10 @@ function clickSeat(event) {
                 `
                 ticketInput.append(newElement);
     
+                let totalBooked = parseInt(document.getElementById('total-booked').innerText);
+                totalBooked += 1;
+                document.getElementById('total-booked').innerText = String(totalBooked);
+
                 let totalSeats = parseInt(document.getElementById('total-seats').innerText);
                 totalSeats -= 1;
                 document.getElementById('total-seats').innerText = String(totalSeats);
@@ -56,6 +60,10 @@ function clickSeat(event) {
             const removeElementId = event.innerText;
             const removeElement = document.getElementById(removeElementId);
             ticketInput.removeChild(removeElement);
+
+            let totalBooked = parseInt(document.getElementById('total-booked').innerText);
+            totalBooked -= 1;
+            document.getElementById('total-booked').innerText = String(totalBooked);
 
             let totalSeats = parseInt(document.getElementById('total-seats').innerText);
             totalSeats += 1;
