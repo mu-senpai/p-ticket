@@ -39,10 +39,6 @@ function clickSeat(event) {
                 totalPrice += 550;
                 document.getElementById('total-price').innerText = String(totalPrice);
                 document.getElementById('grand-total').innerText = String(totalPrice);
-
-                if (count > 0) {
-                    validateInfo();
-                }
     
                 return;
             }
