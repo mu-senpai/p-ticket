@@ -40,6 +40,8 @@ function clickSeat(event) {
                 document.getElementById('total-price').innerText = String(totalPrice);
                 document.getElementById('grand-total').innerText = String(totalPrice);
     
+                document.getElementById('apply-coupon').removeAttribute('disabled');
+                
                 return;
             }
         }
